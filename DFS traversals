@@ -1,0 +1,63 @@
+//binary tree representation
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Node{
+    
+  
+    int data;        //data present in present Node
+     Node* left;     //address of next Node
+     Node* right;
+    
+    node(int data){            
+        this->data=data;     //here this refers to that particular Node name the Node is referring to ex-Node1,Node2etc
+        this->left=NULL;      //declaring left and right pointer to null
+        this->right=NULL;   
+    }
+};
+
+
+void preorder(node)  //preorder=root-left-right
+{
+    if(node==null)
+    return;
+    
+    cout<<node->data<<" "; //root
+    preorder(node->left); //left whole part
+    preorder(node->right); //right whole part    
+}
+
+void inorder(node)  //inorder=left-root-right
+{
+    if(node==null)
+    return;
+    
+    
+    preorder(node->left); //left whole part
+    cout<<node->data<<" "; //root
+    preorder(node->right); //right whole part    
+}
+
+void postorder(node)  //left-right-root
+{
+    if(node==null)
+    return;
+    
+    
+    preorder(node->left); //left whole part
+    preorder(node->right); //right whole part
+    
+    cout<<node->data<<" "; //root
+}
+
+int main()
+{  
+    node a=new node(1);    
+    node b=new node(2);
+    node c=new node(3);
+    a->left=b;          //left pointer of a points to b
+    a->right=c;         //right pointer of a points c
+    
+    
+}
