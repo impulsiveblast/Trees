@@ -1,0 +1,48 @@
+//bfs traversal
+//1 queue and 1 vector of vector is required
+
+//a vector of vector is retrned containing bfs traversal
+
+class traversal{
+    
+    public:
+    
+    vector<vector<int>> levelorder(Node* root){
+        
+        vector<vector<int>> ans;
+        
+        
+        queue<Node*> q;
+        
+        // if(root==NULL)
+        q.push(root);
+        while(q.size()!=0)
+        {
+            int size=q.size();
+            
+            vector<int> v;
+            
+            
+            for(int i=0;i<size;i++)
+            {
+                Node* a=q.front();
+                q.pop();
+                
+                if(a->left!=NULL)
+                 q.push(a->left);
+                 
+                 if(a->right!=NULL)
+                 q.push(a->right);
+                 
+                 v.push_back(a->val);
+                 
+            }
+            
+            ans.push_back(v);
+            
+        }
+        
+        return ans;
+        
+    }
+};
