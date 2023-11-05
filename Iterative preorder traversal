@@ -1,0 +1,13 @@
+//iterative pre-order
+//stack would be used
+//pre-order=root-left-right
+
+
+class preorder{
+ 
+ public:
+ 
+ 
+ 
+    
+}
