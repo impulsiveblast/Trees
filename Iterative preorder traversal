@@ -7,7 +7,38 @@ class preorder{
  
  public:
  
+ vector<int> preorder(Node* root){
+     
+     vector<int> preorder;
+     
+     stack<Node*> st;
+     st.push(root);
+     
+     if(st.size()==0)
+     {
+         return preorder;
+     }
+     
+       while(st.size()!=0)
+      {
+        Node *a=st.top();
+        st.pop();                      //tc==O(N)
+        
+        if(a->right!=NULL)
+        st.push(a->right);
+        
+        if(a->left!=NULL)
+        st.push(a->left);
+        
+        preorder.push_back(a->val);
+        
+      }
+     
+     
+     return preorder;
+     
+ }
  
  
     
-}
+};
