@@ -1,0 +1,10 @@
+//inorder traversal
+//left-root-right
+//stack would be used for the iterative approach
+
+class inorder{
+    
+    vector<int> inorder(Node* root){
+          
+    }
+}
