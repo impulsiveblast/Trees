@@ -1,0 +1,17 @@
+//maximum depth  of a binary tree
+//recursive meathod is followed in this problem
+ 
+ class depth{
+     
+     int depth(Node* root)
+     {
+         if(root=NULL)
+         {
+             return 0;
+         }
+         int lt=depth(root->left);
+         int rt=depth(root->right);
+         
+         return 1+max(lt,rt);
+     }
+ }
