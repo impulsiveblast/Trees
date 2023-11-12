@@ -1,0 +1,70 @@
+//checking if 2 trees are identical or not
+//for 2 trees to be identical both should have exact same traversal values :preorder or inorder or post order
+
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+/* A binary tree node */
+
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+ 
+    Node(int d)
+    {
+        this->data = d;
+        this->left = NULL;
+        this->right = NULL;
+    }
+};
+
+void preorder(Node* a,vector<int> v1)
+{
+    
+    v1.push_back(a->val);
+    preorder(a->left);
+    preorder(a->right);
+    
+}
+
+void inorder(Node* a,vector<int> v1)
+{
+    preorder(a->left);
+    v1.push_back(a->val);
+    preorder(a->right);
+}
+
+void postorer(Node* a,vector<int> v1)
+{
+    postorder(a->left);
+    postorder(a->right);
+    v1.push_back(a->val);
+    
+}
+
+
+int main()
+{
+    
+    //tree a1,a2 exists or have been created
+    vector<int> v1,v2;  //vectors containing the traversals
+    
+    preorder(a1,v1);  //storing the traversals of a1 tree in v1
+    preorder(a2,v2);  //storing the traversals of a2 tree in v2
+    
+    if(v1==v2)
+    {
+        cout<<"Identical trees ";
+    }
+    else
+    {
+        cout<<"Non identical trees";
+    }
+    
+    return 0;
+    
+}
+ 
