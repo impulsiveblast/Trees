@@ -1,0 +1,33 @@
+//diameter of a tree
+//use a height function to calculate the height(depth) of left as well as right sie of tree
+//max of (lh+rh) of all nodes across the tree is diameter of the tree
+
+class solution{
+    
+    // public:
+    
+    int diameter(Node* root)
+    {
+        int diameter=0;
+        height(root,diameter);
+        
+        return diameter;
+    }
+    
+    
+    int height(Node* root,int diameter)   //diameter only purpose is to calculate the max path lenth among all path length 
+    { 
+        if(root==NULL)
+        {
+            return 0;
+        }
+        
+        int lt=height(root->left,diameter);
+        int rt=height(root->right,diameter);
+        
+        diameter=max(diameter,lt+rt);   //max path length among all is calculated via it otherwise the coe is completely a max depth calculating tree
+        
+        return 1+max(lt,rt);
+    }
+};
+
