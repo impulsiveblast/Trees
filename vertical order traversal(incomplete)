@@ -1,0 +1,11 @@
+//vertical order traversal of the binary tree
+//instead of vector<int> v[k] i.e vector of vectors we use map<int,vector,int>> m 
+//as we dont exactly know no of int values in the mapping 
+
+//diffrence between array of vectors and mapping and integer with vector is: in mapping negative numbers can also be used also..the mapping can help in dynamic storage of integers (i.e. here nodes in vectors)
+
+
+
+//value corresponding to each horizontal distance from main root node is stored in vectors and all vectors printed at the end 
+//this ensures printing numbers on basis of left to right traversal of all elements in vertical line passing through each horizontal distance
+
