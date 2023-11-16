@@ -10,7 +10,7 @@ class Node{
      Node* left;     //address of next Node
      Node* right;
     
-    node(int data){            
+    Node(int data){            
         this->data=data;     //here this refers to that particular Node name the Node is referring to ex-Node1,Node2etc
         this->left=NULL;      //declaring left and right pointer to null
         this->right=NULL;   
