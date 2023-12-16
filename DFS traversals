@@ -34,9 +34,9 @@ void inorder(node)  //inorder=left-root-right
     return;
     
     
-    preorder(node->left); //left whole part
+    inorder(node->left); //left whole part
     cout<<node->data<<" "; //root
-    preorder(node->right); //right whole part    
+    inorder(node->right); //right whole part    
 }
 
 void postorder(node)  //left-right-root
@@ -45,8 +45,8 @@ void postorder(node)  //left-right-root
     return;
     
     
-    preorder(node->left); //left whole part
-    preorder(node->right); //right whole part
+    postorder(node->left); //left whole part
+    postorder(node->right); //right whole part
     
     cout<<node->data<<" "; //root
 }
